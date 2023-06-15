@@ -37,6 +37,10 @@ ol, ul {
 	list-style: none;
 }
 
+/* p, ul {
+    display: inline;
+} */
+
 blockquote, q {
 	quotes: none;
 }
