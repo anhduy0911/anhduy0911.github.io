@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research · Duy A. Nguyen</title>
+<meta name="description" content="Research of Duy A. Nguyen: robust multimodal learning, trustworthy vision-language models, and efficient, controllable generative models.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="nav-name" href="index.html">Duy A. Nguyen</a>
+  <a href="about.html">About</a>
+  <a href="research.html" aria-current="page">Research</a>
+  <a href="work.html">Publications</a>
+</nav>
+
+<main>
+  <header class="page-head">
+    <h1>Research</h1>
+    <hr class="short-rule">
+    <p>Models look strong on clean benchmarks and fail on messy inputs. I work on closing that gap, both in how models are built and in how we measure them.</p>
+  </header>
+
+  <section class="section flush-top" aria-label="Research areas">
+    <div class="wrap">
+      <div class="chapters">
+        <article class="chapter">
+          <figure class="figure">
+            <img src="images/figures/robult-clusters.png" alt="Three density plots showing two classes as separate clusters for text-only, image-only and full inputs" width="1400" height="350" loading="lazy">
+            <figcaption>Robult keeps classes separable with text only, image only, or both.</figcaption>
+          </figure>
+          <p class="when">2022 – now · IJCAI 2025 · ACCV 2026</p>
+          <h2>Robust multimodal learning with missing modalities</h2>
+          <p>Real systems lose sensors, skip scans and see partial records. <strong>Robult</strong> pairs a soft positive-unlabeled contrastive loss with latent reconstruction, so a model keeps task-relevant and modality-specific information. It stays accurate when modalities are missing or labels are scarce, and it plugs into existing architectures. <strong>SURE</strong> brings scalable uncertainty estimation to pretrained multimodal models under the same missing-modality conditions, so a prediction comes with a measure of how far to trust it.</p>
+          <div class="tags"><span class="tag">Contrastive learning</span><span class="tag">Semi-supervised</span><span class="tag">Uncertainty</span></div>
+          <div class="links"><a href="https://www.ijcai.org/proceedings/2025/666">Robult paper</a><a href="https://arxiv.org/abs/2509.03477">arXiv</a><a href="work.html">SURE</a></div>
+        </article>
+
+        <article class="chapter">
+          <p class="when">2025 – now · ICML 2026 Workshop</p>
+          <h2>Trustworthy medical vision-language models</h2>
+          <p>Medical VLMs score well on curated benchmarks, but deployment brings blurred images, partial evidence and ambiguous questions. I build perturbation benchmarks across corruption types and severities, and I check through a clinician annotation study that the synthetic corruptions match what appears in practice. I then study calibration, correctness prediction and shortcut signals. A model should be able to choose between answering, asking a clarifying question and abstaining. First results appeared at an ICML 2026 workshop, and the full study is under review.</p>
+          <div class="tags"><span class="tag">VLMs</span><span class="tag">Robustness</span><span class="tag">Selective prediction</span><span class="tag">Human evaluation</span></div>
+          <div class="links"><a href="work.html">Workshop paper</a></div>
+        </article>
+
+        <article class="chapter">
+          <p class="when">2025 – now · With Cantina Labs · Under submission</p>
+          <h2>Efficient and controllable image generation</h2>
+          <p><strong>Troupe</strong> scales multi-identity personalization from a few people to crowds of 20, each rendered from one reference photo. The premise is that identities fade as groups grow because the added identity branch interferes with the pretrained model's ability to compose groups. Troupe keeps conditioning local on a frozen few-step backbone: each person gets eight private tokens, and a star-shaped attention mask confines them to that person's face region. Since every face can serve as its own reference, Troupe trains on ordinary photos, with mosaics supplying the small faces crowds need. On CrowdScale, a new 2-to-20-person benchmark, it reaches the highest average identity similarity of every method tested, closed models included. For 20 people it uses about 37% of the FLOPs per image of the strongest open baseline.</p>
+          <p>At Cantina Labs I distill in-house image and video diffusion models into faster samplers that keep their quality, and I work on identity-preserving generation.</p>
+          <div class="tags"><span class="tag">Diffusion &amp; flow matching</span><span class="tag">Personalization</span><span class="tag">Distillation</span><span class="tag">Benchmarks</span></div>
+          <div class="links"><a href="work.html">Troupe</a></div>
+        </article>
+
+        <article class="chapter">
+          <figure class="figure">
+            <img src="images/figures/minielm-online.png" alt="MiniELM online training loop: the student model rewrites a query, a search engine returns products for both queries, and an LLM-simulated user feeds a reward back to the student" width="1400" height="687" loading="lazy">
+            <figcaption>MiniELM's online loop: simulated user feedback becomes an RL reward.</figcaption>
+          </figure>
+          <p class="when">2024 – 2025 · ACL Findings 2025</p>
+          <h2>Small, adaptive LLMs for search</h2>
+          <p><strong>MiniELM</strong> distills a large language model into a lightweight query-rewriting model offline, then refines it online with reinforcement learning. In the online stage, LLM-generated feedback replaces human labels. The result is a rewriter cheap enough for real-time e-commerce search that keeps adapting to new queries, evaluated on Amazon ESCI.</p>
+          <div class="tags"><span class="tag">LLMs</span><span class="tag">Knowledge distillation</span><span class="tag">RL from AI feedback</span></div>
+          <div class="links"><a href="https://aclanthology.org/2025.findings-acl.363">Paper</a><a href="https://arxiv.org/abs/2501.18056">arXiv</a></div>
+        </article>
+
+        <article class="chapter">
+          <figure class="figure">
+            <img src="images/figures/coinception-overview.png" alt="CoInception pipeline: original and low-pass-filtered series are sampled, encoded by stacked dilated Inception blocks, and trained with a triplet loss" width="1400" height="388" loading="lazy">
+            <figcaption>CoInception: noise-aware sampling plus a dilated Inception encoder.</figcaption>
+          </figure>
+          <p class="when">2019 – 2024 · ICDM · PLOS ONE · EAAI · Sci. Reports</p>
+          <h2>Earlier work: time series and applied ML</h2>
+          <p><strong>CoInception</strong> (ICDM 2024) is a noise-aware self-supervised time-series encoder. It ranks first on over two-thirds of UCR classification datasets with 40% of the parameters of the runner-up. Other work includes graph-assisted multi-pill detection (PLOS ONE 2023, +9.4% COCO mAP over Faster R-CNN), and a single calibration model for many low-cost air sensors that was integrated into an air-quality monitoring system in Hanoi (EAAI 2024). It also includes ensemble forecasting for river discharge and water level (Scientific Reports 2022, EAAI 2023).</p>
+          <div class="tags"><span class="tag">Self-supervised</span><span class="tag">Graph neural networks</span><span class="tag">Time series</span></div>
+          <div class="links"><a href="https://github.com/anhduy0911/CoInception">CoInception code</a><a href="work.html">All papers</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METHODS & TOOLS ============ -->
+  <section class="section tint" aria-labelledby="tools-h">
+    <div class="wrap" style="text-align:center">
+      <div class="section-head" style="margin-bottom:24px">
+        <h2 id="tools-h">Methods &amp; tools</h2>
+        <hr class="short-rule">
+      </div>
+      <div class="tags" style="justify-content:center">
+        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Diffusion &amp; flow matching</span>
+        <span class="tag">Knowledge distillation</span><span class="tag">RL fine-tuning</span><span class="tag">Vision-language models</span>
+        <span class="tag">LLMs</span><span class="tag">Contrastive &amp; self-supervised learning</span><span class="tag">Uncertainty &amp; calibration</span>
+        <span class="tag">Graph neural networks</span><span class="tag">Object detection</span><span class="tag">GPU clusters &amp; Kubernetes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE ============ -->
+  <section class="section" aria-label="A quote I like">
+    <figure class="quote">
+      <span class="ic ic-quote" aria-hidden="true"></span>
+      <blockquote><p>The first principle is that you must not fool yourself, and you are the easiest person to fool.</p></blockquote>
+      <figcaption><cite>Richard Feynman, physicist</cite></figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ INTERNSHIPS ============ -->
+  <section class="section tint" aria-labelledby="collab-h">
+    <div class="wrap" style="text-align:center">
+      <div class="section-head" style="margin-bottom:20px">
+        <h2 id="collab-h">Work with me</h2>
+        <hr class="short-rule">
+      </div>
+      <p class="prose">I'm looking for Summer 2027 research internships in multimodal learning, generative models and trustworthy AI. I'm also happy to talk about collaborations.</p>
+      <div class="btn-row">
+        <a class="btn" href="mailto:duyan2@illinois.edu"><span class="ic ic-email" aria-hidden="true"></span> Get in touch</a>
+        <a class="btn btn-line" href="files/cv.pdf"><span class="ic ic-cv" aria-hidden="true"></span> Download CV</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <a href="index.html">© 2026 Duy A. Nguyen</a>
+  <button type="button" class="toggle" data-theme-toggle aria-pressed="false"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 1.5a6.5 6.5 0 0 0 0 13z" fill="currentColor"/></svg><span data-theme-label>Dark</span></button>
+  <a href="https://github.com/tuannguyen8390/sciencefolio" rel="noopener">Built with Sciencefolio</a>
+</footer>
+
+</body>
+</html>

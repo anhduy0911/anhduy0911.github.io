@@ -1,177 +1,200 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Duy A. Nguyen | Personal Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" type="image/jpg" href="/assets/imgs/duy_ava.jpeg">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<!-- Type pack (grotesk or serif) is set once, in js/theme.js. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duy A. Nguyen · Multimodal &amp; Generative AI</title>
+<meta name="description" content="Duy A. Nguyen, PhD student in Computer Science at UIUC, working on robust multimodal learning, trustworthy vision-language models and efficient generative models. Seeking Summer 2027 research internships.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<nav class="nav" aria-label="Main">
+  <a href="about.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="work.html">Publications</a>
+</nav>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo" style="background-image: url('assets/imgs/duy.jpg'); background-position: center; background-size: cover;">
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Duy A. Nguyen</h1>
-								<p>
-									PhD Student - Computer Science - UIUC <br> 
-									Machine Learning - Deep Learning - Multimodal Learning <br>
-								</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#education">Biography</a></li>
-								<li><a href="#experience">Experience</a></li>
-								<li><a href="#award">Honours and Awards</a></li>
-								<li><a href="#publication">Publications</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
-					</header>
+<main>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <figure class="portrait"><img src="images/portrait.jpg" alt="Portrait of Duy A. Nguyen" width="300" height="300"></figure>
+    <h1>Duy A. Nguyen</h1>
+    <p class="kicker">PhD Student · Computer Science · UIUC</p>
+    <hr class="short-rule">
+    <p class="statement">I build multimodal and generative models that <strong>stay reliable under real-world conditions</strong>: missing inputs, corrupted data, crowded scenes.</p>
+    <ul class="profile-links">
+      <li><a href="https://scholar.google.com/citations?user=-NRwc8EAAAAJ&amp;hl=en"><span class="ic ic-scholar" aria-hidden="true"></span>Scholar</a></li>
+      <li><a href="https://github.com/anhduy0911"><span class="ic ic-github" aria-hidden="true"></span>GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/duy-nguyen-31b5791b1/"><span class="ic ic-linkedin" aria-hidden="true"></span>LinkedIn</a></li>
+      <li><a href="mailto:duyan2@illinois.edu"><span class="ic ic-email" aria-hidden="true"></span>Email</a></li>
+      <li><a href="files/cv.pdf"><span class="ic ic-cv" aria-hidden="true"></span>CV</a></li>
+    </ul>
+    <p class="kicker">Seeking Summer 2027 research internships</p>
+  </header>
 
-				<!-- Main -->
-					<div id="main">
+  <!-- ============ HELLO ============ -->
+  <section class="section" aria-labelledby="hello-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="hello-h">Hi, I'm Duy! <span aria-hidden="true">👋</span></h2>
+        <hr class="short-rule">
+      </div>
+      <div class="prose">
+        <p>I'm a third-year PhD student in Computer Science at the University of Illinois Urbana-Champaign, advised by Prof. <a href="https://minhdo.ece.illinois.edu/">Minh N. Do</a> and co-advised by Prof. <a href="https://mail-research.com/">Khoa D. Doan</a> (VinUniversity).</p>
+        <p>I grew up in Hanoi, where one of my first research projects was forecasting river levels from noisy sensor data. It left me with a question I keep coming back to: <em>what happens to a model when the data stops being clean?</em> Today I chase it in multimodal models that survive missing inputs, in medical VLMs that know when not to answer, and in image generators that try to keep every person recognizable, even in a crowd of 20.</p>
+        <p>I love the full loop of research: a fresh idea, the experiments that prove it wrong, and the day it finally works. If that sounds like your team, let's talk!</p>
+      </div>
+    </div>
+  </section>
 
-						<!-- Intro -->
-							<article id="education">
-								<h2 class="major">Biography</h2>
-								<span class="image main"><img src="images/education.png" alt="" /></span>
-								<p> 
-									I’m Duy Nguyen, currently a PhD candidate in Computer Science at the University of Illinois Urbana-Champaign. I'm working under the supervision of Professor <a href="https://minhdo.ece.illinois.edu/">Minh N. Do</a>. 
-									My current research focuses on <b>multimodal learning</b> and <b>representation learning</b>. Recently, I've been diving into ways to handle <b>extreme cases in multimodal systems</b>, where data might be incomplete or inconsistent. It's a fascinating challenge to make models more trustworthy, even when they're working with less-than-perfect data. I work a lot with <b>semi-supervised and self-supervised learning techniques</b> to address these issues. One of my key interests is <b>uncertainty estimation</b>, where I aim to improve both the reliability and interpretability of the models I develop.
-								</p>
-								<p> 
-									Looking ahead, I’m shifting my focus to <b>Large Multimodal Models (LMMs)</b>. My main goal is to enhance their efficiency and reliability while still keeping accuracy high. Rather than developing entirely new large language models, I want to create <b>plug-in techniques</b> — essentially tools that can be easily integrated with existing LLMs. This way, I can help improve their performance in a more scalable and practical way.
-								</p>
-								<p>
-									I've also been fortunate to publish in several venues like ICDM, EAAI, Scientific Reports and PLOS ONE. My past projects have covered a range of topics, from time series prediction and sensor calibration to healthcare AI applications. I’ve worked extensively with technologies like graph neural networks, attention mechanisms, and ensemble learning, and I'm always excited to explore new challenges in AI and machine learning!
-								</p>
-								<p>
-									I was born in Hanoi, Vietnam, and grew up here. 
-									I got my Bachelor (Engineer) degree in Information & Communication Technology (ICT) from School of Information And Communication Technology, Hanoi University of Science and Technology, Vietnam.
-									<!-- My undergrad research thesis is about detecting pills in medical captures, with the support of information from prescriptions under Graph representation (You can find it <a href="assets/files/[20184249][NguyenAnhDuy][Thesis_NguyenAnhDuy_KGPNet_A_Knowledge_Graph_based_framework_for_Pill_detection].pdf">here</a> if interested).  -->
-								</p>
-								<p>I am eager to learn, and I am very open to new collaborations.
-									Please <a href="#contact">drop me a message</a> if you are interested in a collaboration, or just want to reach out.
-									Here is my <a href="assets/files/NguyenAnhDuy_CV.pdf">CV</a> for more details.
-								</p>
-							</article>
+  <!-- ============ NEWS ============ -->
+  <section class="section tint" aria-labelledby="news-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="news-h">News</h2>
+        <hr class="short-rule">
+      </div>
+      <ul class="news">
+        <li><span class="news-date">2026</span><span><span aria-hidden="true">🎉</span> <strong>SURE</strong> accepted at <strong>ACCV 2026</strong>. See you in Osaka!</span></li>
+        <li><span class="news-date">2026</span><span><span aria-hidden="true">🚀</span> <strong>Troupe</strong>, crowd-scale multi-identity image generation, is under submission.</span></li>
+        <li><span class="news-date">2026</span><span><span aria-hidden="true">📄</span> <strong>Answer, Clarify, or Abstain</strong> at the ICML 2026 Workshop on Efficient Multimodal Question Answering.</span></li>
+        <li><span class="news-date">2025</span><span><span aria-hidden="true">🎉</span> <strong>Robult</strong> at IJCAI 2025 and <strong>MiniELM</strong> at ACL Findings 2025.</span></li>
+        <li><span class="news-date">May 2025</span><span><span aria-hidden="true">💼</span> Joined <strong>Cantina Labs</strong> as a Research Scientist Intern.</span></li>
+      </ul>
+    </div>
+  </section>
 
-						<!-- Work -->
-							<article id="experience">
-								<h2 class="major">Experience</h2>
-								<span class="image main"><img src="images/experience.png" alt=""/></span>
-								<p>
-									Before entering UIUC, I spent a gap year working at a Smart Health Center, founded under the cooporation of Vin University and University of Illinois Urbana - Champaign. My work here involve developing ML/DL frameworks for time series, multimodal data, with major appication to Healthcare domain.
-								</p>
-								<p>
-									During my undergrad, from 2020 to 2022, I worked in Naver-SoICT laboratory, Hanoi University of Science and Technology; before spending two last months of 2022 to do an internship at Japanese National Institute of Advanced Industrial Science and Technology (AIST). 
-									My works there centered around two projects: the first was about air quality monitoring and forecasting with actual sensor devices, 
-									the second was about personal health monitoring with actual mobile application and deep learning-driven tools.
-								</p>
-							</article>
+  <!-- ============ WHAT I WORK ON ============ -->
+  <section class="section" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="work-h">What I work on</h2>
+        <hr class="short-rule">
+      </div>
+      <div class="cols3">
+        <article class="col">
+          <span class="ic ic-puzzle col-icon" aria-hidden="true"></span>
+          <h3>Robust multimodal learning</h3>
+          <p>Models that keep working when a modality is missing or labels are scarce, and that know when to be uncertain. IJCAI&nbsp;2025, ACCV&nbsp;2026.</p>
+          <div class="tags"><span class="tag">Missing modalities</span><span class="tag">Uncertainty</span></div>
+        </article>
+        <article class="col">
+          <span class="ic ic-shield col-icon" aria-hidden="true"></span>
+          <h3>Trustworthy vision-language models</h3>
+          <p>Stress-testing medical VLMs on realistic, clinician-validated corruptions, and teaching them when to answer, ask, or abstain.</p>
+          <div class="tags"><span class="tag">VLMs</span><span class="tag">Robustness</span><span class="tag">Calibration</span></div>
+        </article>
+        <article class="col">
+          <span class="ic ic-wand col-icon" aria-hidden="true"></span>
+          <h3>Efficient, controllable generation</h3>
+          <p>Distilling large diffusion and language models into fast ones, and steering them with RL: few-step image and video diffusion, crowd-scale multi-identity generation, LLM query rewriting.</p>
+          <div class="tags"><span class="tag">Diffusion</span><span class="tag">LLMs</span><span class="tag">RL</span></div>
+        </article>
+      </div>
+      <p class="more"><a href="research.html">All research →</a></p>
+    </div>
+  </section>
 
-						<!-- About -->
-							<article id="award">
-								<h2 class="major">Honours and Awards</h2>
-								<span class="image main"><img src="images/honor.png" alt="" /></span>
-								<p>Below are some awards I received, more details can be found in my <a href="assets/files/NguyenAnhDuy_CV.pdf">CV</a>:</p>
-								<ul>
-									<li><b>The second prize in the National Science and Technology Awards for Students in Higher Education
-										Institutions 2022</b>: Winning the second prize with the paper entitled “Joint Optimization of Charging Location and Time
-										for Network Lifetime Extension in WRSNs.”</li>
-									<li><b>Top 5 AI Solutions in AI Awards 2022</b>: Being one of 5 best AI solutions in AI Awards 2022 - Vietnam AI Day 2022,
-										held by VNExpress newspaper in colabration with AI4VN organization with solution: “VAIPE: Protective healthcare
-										monitoring and supporting system for Vietnamese”</li>
-									<li><b>The first prize in SoICT-IBM-Hackathon 2021</b>: Winning the first prize in Call For Code Track of
-										SoICT-IBM-Hackathon 2021 with the project entitled “A platform for forecasting floods based on sensor system, applying deep
-										neural network.”</li>
-								</ul>
-							</article>
-						
-							<!-- Publications -->
-							<article id="publication">
-								<h2 class="major">Publications</h2>
-								<span class="image main"><img src="images/publication.png" alt="" /></span>
-								<p>Below are some of my publications, more details can be found in my <a href="assets/files/NguyenAnhDuy_CV.pdf">CV</a>:</p>
-								<ul>
-									<li><b>Robult: Leveraging Redundancy and Modality-Specific Features for Robust Multimodal Learning</b>: Duy A. Nguyen, Abhi Kamboj, Minh N. Do. International Joint Conferences on Artificial Intelligence (IJCAI), 2025.</li>
-									<li><b>MiniELM: A Lightweight and Adaptive Query Rewriting Framework for E-Commerce Search Optimization</b>: Duy A. Nguyen, Rishi Kesav Mohan, Shimeng Yang, Pritom Saha Akash, Kevin Chen-Chuan Chang. Association for Computational Linguistics Findings (ACL Findings), 2025.</li>
-									<li><b>Improving Time Series Encoding with Noise-Aware Self-Supervised Learning and an Efficient Encoder</b>: Duy A. Nguyen, Trang H. Tran, 
-										Hieu H. Pham, Phi Le Nguyen, Lam M. Nguyen. International Conference on Data Mining (ICDM), 2024.</li>
-									<li><b>High accurate and explainable multi-pill detection framework with graph neural network-assisted multimodal data fusion</b>: Duy A. Nguyen, Huy Hieu Pham, Huynh Thanh Trung, Quoc Viet Hung Nguyen, Thao Nguyen Truong, Phi Le Nguyen. PLOS ONE 2023.</li>
-									<li><b>Accurate Discharge and Water Level Forecasting Using Ensemble Learning with Genetic Algorithm and Singular Spectrum Analysis-based Denoising</b>: Duy A. Nguyen, Phi Le Nguyen, Viet Hung Vu, Quoc Viet Pham, Viet Huy Nguyen,
-										Minh Hieu Nguyen, Thanh Hung Nguyen, Kien Nguyen. Nature Scientific Reports 2022.</li>
-								</ul>
-							</article>
+  <!-- ============ SELECTED PUBLICATIONS ============ -->
+  <section class="section tint" aria-labelledby="sel-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="sel-h">Selected publications</h2>
+        <hr class="short-rule">
+      </div>
+      <div class="entries">
+        <article class="entry">
+          <p class="when">2026 · Under submission</p>
+          <h3><a href="research.html">Troupe: Scaling Multi-Identity Generation to Crowds on a Frozen Few-Step Backbone</a></h3>
+          <p><strong>D. A. Nguyen</strong>, J. Chavan, D. Lee, et al. (UIUC, Cantina Labs)</p>
+          <p>Up to 20 people in one image, each from a single photo. Highest identity similarity on a new 2-to-20-person benchmark, closed models included, at about 37% of the strongest open baseline's FLOPs.</p>
+        </article>
+        <article class="entry">
+          <p class="when">ACCV 2026 · Accepted</p>
+          <h3><a href="work.html">SURE: Scalable Uncertainty Estimation for Pretrained Multimodal Models with Missing Modalities</a></h3>
+          <p><strong>D. A. Nguyen</strong>, D. H. Quan, K. D. Doan, M. N. Do</p>
+        </article>
+        <article class="entry">
+          <p class="when">IJCAI 2025</p>
+          <h3><a href="https://www.ijcai.org/proceedings/2025/666">Robult: Leveraging Redundancy and Modality-Specific Features for Robust Multimodal Learning</a></h3>
+          <p><strong>D. A. Nguyen</strong>, A. Kamboj, M. N. Do</p>
+        </article>
+        <article class="entry">
+          <p class="when">ACL Findings 2025</p>
+          <h3><a href="https://aclanthology.org/2025.findings-acl.363">MiniELM: A Lightweight and Adaptive Query Rewriting Framework for E-Commerce Search Optimization</a></h3>
+          <p><strong>D. A. Nguyen</strong>, R. K. Mohan, S. Yang, P. S. Akash, K. C.-C. Chang</p>
+        </article>
+        <article class="entry">
+          <p class="when">ICML 2026 Workshop</p>
+          <h3><a href="work.html">Answer, Clarify, or Abstain: Fine-Grained Selective Prediction for Medical VLMs</a></h3>
+          <p><strong>D. A. Nguyen</strong>, T. T. Nguyen, M. N. Do, K. D. Doan</p>
+        </article>
+      </div>
+      <p class="more"><a href="work.html">All publications →</a></p>
+    </div>
+  </section>
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="https://formspree.io/f/xnqrpdzg">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/duy-nguyen-31b5791b1/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/anhduy0911" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-									<li><a href="https://scholar.google.com/citations?user=-NRwc8EAAAAJ&hl=en" class="icon brands fa-google" target="_blank"><span class="label">Google Scholar</span></a></li>
-								</ul>
-							</article>
-					</div>
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" aria-labelledby="exp-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="exp-h">Experience</h2>
+        <hr class="short-rule">
+      </div>
+      <div class="entries">
+        <article class="entry">
+          <p class="when">2025 – now · Cantina Labs</p>
+          <h3>Research Scientist Intern</h3>
+          <p>Speeding up in-house image and video diffusion models through distillation while preserving quality; identity-preserving and audio-driven lip-sync video generation.</p>
+        </article>
+        <article class="entry">
+          <p class="when">2023 – now · University of Illinois Urbana-Champaign</p>
+          <h3>PhD Researcher</h3>
+          <p>Advised by Prof. Minh N. Do and co-advised by Prof. Khoa D. Doan. Robust multimodal learning, uncertainty estimation and reliable vision-language models.</p>
+        </article>
+      </div>
+      <p class="more"><a href="about.html">Full background →</a></p>
+    </div>
+  </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; duyan2@illinois.edu</p>
-						<p class="copyright">&copy; anhduy0911@gmail.com</p>
-						<br>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/duy-nguyen-31b5791b1/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/anhduy0911" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-							<li><a href="https://scholar.google.com/citations?user=-NRwc8EAAAAJ&hl=en" class="icon brands fa-google" target="_blank"><span class="label">Google Scholar</span></a></li>
-						</ul>
-					</footer>
-					
-			</div>
+  <!-- ============ QUOTE ============ -->
+  <section class="section tint" aria-label="A quote I like">
+    <figure class="quote">
+      <span class="ic ic-quote" aria-hidden="true"></span>
+      <blockquote><p>All models are wrong, but some are useful.</p></blockquote>
+      <figcaption><cite>George E. P. Box, statistician</cite></figcaption>
+    </figure>
+  </section>
 
-		<!-- BG -->
-			<div id="bg"></div>
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="wrap" style="text-align:center">
+      <div class="section-head" style="margin-bottom:20px">
+        <h2 id="contact-h">Get in touch</h2>
+        <hr class="short-rule">
+      </div>
+      <p class="prose">I'm looking for Summer 2027 research internships in multimodal learning, generative models and trustworthy AI. Email is the best way to reach me, and I'm always happy to chat about research.</p>
+      <div class="btn-row">
+        <a class="btn" href="mailto:duyan2@illinois.edu"><span class="ic ic-email" aria-hidden="true"></span> duyan2@illinois.edu</a>
+        <a class="btn btn-line" href="files/cv.pdf"><span class="ic ic-cv" aria-hidden="true"></span> Download CV</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<footer class="foot">
+  <a href="index.html">© 2026 Duy A. Nguyen</a>
+  <button type="button" class="toggle" data-theme-toggle aria-pressed="false"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 1.5a6.5 6.5 0 0 0 0 13z" fill="currentColor"/></svg><span data-theme-label>Dark</span></button>
+  <a href="https://github.com/tuannguyen8390/sciencefolio" rel="noopener">Built with Sciencefolio</a>
+</footer>
 
-	</body>
+</body>
 </html>
